@@ -1,0 +1,180 @@
+/*Scroll-bar*/
+::-webkit-scrollbar {
+  width: 10%;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  filter: brightness(100%);
+  z-index: -1;
+}
+
+/* Styling main container */
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling title and menu */
+.content {
+  background: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1;
+  text-align: center;
+  height: 91.5vh;
+}
+
+h1 {
+  padding: 18px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 4px;
+}
+
+/* Styling the menu list */
+.items {
+  padding: 20px;
+  margin-bottom: 30%;
+  margin-top: 20%;
+  letter-spacing: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  line-height: 45px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+a::before {
+  content: "";
+  background-color: #bd8c38;
+  position: absolute;
+  opacity: 25%;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover::before { /*Adding hover effect*/
+  opacity: 25%;
+  bottom: 0;
+  height: 100%;
+}
+
+a:active {
+  color: yellow;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  color: #b9a684;
+  background-color: black;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 10%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 2%;
+}
+footer p {
+  padding-bottom: 4%;
+  margin-bottom: 0%;
+}
+footer h1 {
+  padding-bottom: 0%;
+}
+
+/*Styling social media icons in the footer*/
+.social-icons {
+  padding-bottom: 10px;
+}
+.social-icons a::before {
+  opacity: 0;
+}
+.social-icons a:hover::before {
+  opacity: 0;
+}
+.social-icons .icon {
+  color: #b9a684;
+  margin: 30px;
+}
+.social-icons .icon:hover {
+  color: darkgreen;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 320px) {
+  /* iPhone 4 */
+  body {
+    font-size: 10px;
+  }
+  .content {
+    height: 100%;
+    max-width: 50%;
+  }
+  .items {
+    font-size: 12px;
+    margin: 7%;
+  }
+  footer {
+    padding-top: 0;
+  }
+  a::before {
+    height: 5px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  /* iPhone X */
+  .content {
+    height: 80vh;
+  }
+}
+@media only screen and (max-width: 411px) {
+  /* Google Pixel */
+  .content {
+    height: 80vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* iPad */
+  .content {
+    margin-top: 4%;
+    height: 100vh;
+  }
+  footer p {
+    padding-bottom: 21px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  /* Macbook Pro */
+  .content {
+    height: 91.5vh;
+  }
+}/*# sourceMappingURL=style.css.map */
